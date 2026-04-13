@@ -1,0 +1,18 @@
+//Find second largest number in array 
+arr=[32,123,4234,213312];
+
+
+def myFunc():
+    largest=float("-inf");
+    sndLargest=float("-inf");
+    for item in arr:
+        if largest<item:
+            sndLargest=largest;
+            largest=item;
+        elif sndLargest>item and item!=largest:
+            sndLargest=item;
+    return sndLargest;
+
+print(myFunc());
+            
+            
