@@ -1,0 +1,12 @@
+num = int(input("Enter number: "))
+
+s = str(num)   # convert to string
+rev = ""
+
+for i in range(len(s)):
+    rev = s[i] + rev   # reverse using index
+
+if s == rev:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
