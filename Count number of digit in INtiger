@@ -1,0 +1,81 @@
+# 🔢 Count Digits in a Number (Python)
+
+## 📌 Problem
+
+Given a number `n`, count the total number of digits.
+
+**Example:**
+
+```
+Input: 214412
+Output: 6
+```
+
+---
+
+## 🚀 Approach 1: Iterative Method (Loop)
+
+```python
+def count_digits_iterative(n):
+    count = 0
+    while n > 0:
+        count += 1
+        n = n // 10
+    return count
+
+print(count_digits_iterative(214412))
+```
+
+### ⏱ Time Complexity:
+
+* O(log₁₀ n)
+
+### 📦 Space Complexity:
+
+* O(1)
+
+---
+
+## ⚡ Approach 2: Logarithmic Method
+
+```python
+import math
+
+def count_digits_log(n):
+    if n == 0:
+        return 1
+    return int(math.log10(n)) + 1
+
+print(count_digits_log(214412))
+```
+
+### ⏱ Time Complexity:
+
+* O(1)
+
+### 📦 Space Complexity:
+
+* O(1)
+
+---
+
+## 🧠 Approach 3: Recursion Method
+
+```python
+def count_digits_recursive(n):
+    if n == 0:
+        return 0
+    return 1 + count_digits_recursive(n // 10)
+
+print(count_digits_recursive(214412))
+```
+
+### ⏱ Time Complexity:
+
+* O(log₁₀ n)
+
+### 📦 Space Complexity:
+
+* O(log₁₀ n) (due to recursion stack)
+
+
