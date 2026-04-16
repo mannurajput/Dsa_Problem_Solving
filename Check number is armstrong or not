@@ -1,0 +1,10 @@
+num=153
+n=num
+nod=len(str(n))
+total=0
+while n>0:
+    digit=n%10
+    total=total+(digit**nod)
+    n=n//10
+    
+print(num==total)
