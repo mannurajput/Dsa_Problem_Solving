@@ -1,0 +1,11 @@
+num=[123,12,23,12,12,2313,23];
+dict={}
+
+for i in range(len(num)):
+    if num[i] not in dict:
+        dict[num[i]]=1
+    else:
+        dict[num[i]]+=1
+print(dict)
+
+//output={123: 1, 12: 3, 23: 2, 2313: 1}
