@@ -1,0 +1,10 @@
+m = [24, 233, 23, 23, 35, 45, 43]
+n = [24, 32, 23, 21, 45, 43]
+
+# count how many times each element of n appears in m
+for item in n:
+    count = 0
+    for x in m:
+        if x == item:
+            count += 1
+    print(item, "->", count)
