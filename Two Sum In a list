@@ -1,0 +1,8 @@
+def twoSum(nums, target):
+    seen = {}
+    for i, n in enumerate(nums):
+        if target - n in seen:
+            return [seen[target - n], i]
+        seen[n] = i
+list=[30,20,230,21]
+print(twoSum(list,50))
