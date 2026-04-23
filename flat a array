@@ -1,0 +1,11 @@
+
+def flatten(lis):
+    unique=[];
+    for item in lis:
+        if isinstance(item,list):
+            unique.extend(flatten(item));
+        else:
+            unique.append(item);
+    return unique;
+lis=[1,21,23,21,[1321,[31313]]]
+print(flatten(lis))
