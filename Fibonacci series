@@ -1,12 +1,9 @@
-function fibSeries(n) {
-  let a = 0, b = 1;
-
-  for (let i = 0; i < n; i++) {
-    console.log(a);
-    let next = a + b;
-    a = b;
-    b = next;
-  }
-}
-
-fibSeries(6);
+a=0;
+b=1;
+n=10
+for i in range(n):
+    print(a)
+    next=a+b
+    a=b
+    b=next
+    
