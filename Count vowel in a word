@@ -1,0 +1,10 @@
+# count vowel 
+def myFun(s):
+    count=0;
+    vowel="aeiou"
+    for ch in s.lower():
+        if ch in vowel:
+            count+=1;
+    return count;
+
+print(myFun('hello'))
