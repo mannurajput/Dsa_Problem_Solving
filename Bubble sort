@@ -1,0 +1,10 @@
+def myFun(arr):
+    for i in range(len(arr)):
+        for j in range(len(arr)-i-1):
+            if arr[j]>arr[j+1]:
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+    return arr;
+
+arr=[123123,123,23,2324,4343,5,21,435]
+print(myFun(arr))
+                
