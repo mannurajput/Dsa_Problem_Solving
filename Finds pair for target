@@ -1,0 +1,9 @@
+def myFunc(arr, target):
+    for i in range(len(arr) - 1):
+        if arr[i] + arr[i + 1] == target:
+            return True
+    return False
+
+arr = [21, 312, 324, 21, 12]
+target = 33
+print(myFunc(arr, target))
