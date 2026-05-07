@@ -1,0 +1,10 @@
+arr = ["flower", "flow", "flight"]
+
+prefix = arr[0]
+
+for word in arr[1:]:
+
+    while word.find(prefix) != 0:
+        prefix = prefix[:-1]
+
+print(prefix)
