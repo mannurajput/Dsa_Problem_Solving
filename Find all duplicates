@@ -1,0 +1,13 @@
+arr = [4,3,2,7,8,2,3,1]
+
+freq = {}
+result = []
+
+for num in arr:
+
+    if num in freq:
+        result.append(num)
+    else:
+        freq[num] = 1
+
+print(result)
