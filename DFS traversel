@@ -1,0 +1,9 @@
+def dfs(graph, node, visited):
+    if node in visited:
+        return
+
+    print(node)
+    visited.add(node)
+
+    for nei in graph[node]:
+        dfs(graph, nei, visited)
