@@ -1,0 +1,51 @@
+words = ["wrt","wrf","er","ett","rftt"]
+
+graph = {}
+
+for word in words:
+    for ch in word:
+        graph[ch] = set()
+
+for i in range(len(words)-1):
+
+    w1 = words[i]
+    w2 = words[i+1]
+
+    length = min(len(w1), len(w2))
+
+    for j in range(length):
+
+        if w1[j] != w2[j]:
+
+            graph[w1[j]].add(w2[j])
+
+            break
+
+visited = {}
+result = []
+
+def dfs(ch):
+
+    if ch in visited:
+        return visited[ch]
+
+    visited[ch] = True
+
+    for neighbor in graph[ch]:
+
+        if dfs(neighbor):
+            return True
+
+    visited[ch] = False
+
+    result.append(ch)
+
+    return False
+
+for ch in graph:
+
+    dfs(ch)
+
+result.reverse()
+
+print("".join(result))
