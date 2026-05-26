@@ -1,0 +1,49 @@
+s = "ADOBECODEBANC"
+
+t = "ABC"
+
+need = {}
+window = {}
+
+for ch in t:
+
+    if ch in need:
+        need[ch] += 1
+    else:
+        need[ch] = 1
+
+have = 0
+required = len(need)
+
+left = 0
+
+result = ""
+
+length = float("inf")
+
+for right in range(len(s)):
+
+    ch = s[right]
+
+    if ch in window:
+        window[ch] += 1
+    else:
+        window[ch] = 1
+
+    if ch in need and window[ch] == need[ch]:
+        have += 1
+
+    while have == required:
+
+        if (right - left + 1) < length:
+            result = s[left:right+1]
+            length = right - left + 1
+
+        window[s[left]] -= 1
+
+        if s[left] in need and window[s[left]] < need[s[left]]:
+            have -= 1
+
+        left += 1
+
+print(result)
